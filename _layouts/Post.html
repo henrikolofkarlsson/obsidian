@@ -35,7 +35,7 @@
     <meta
         content="A Jekyll theme for Obsidian users to build digital garden"
         property="og:description">
-    <meta content="{{ site.baseurl }}/about/" property="article:author">
+    <meta content="{{ site.url }}/about/" property="article:author">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
@@ -43,19 +43,19 @@
     {%- if page.title -%}
     <meta content="{{ page.title }}" property="og:title">
     <meta content="article" property="og:type">
-    <meta content="{{ site.baseurl }}{{ page.url }}" property="og:url">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- else -%}
     <meta content="website" property="og:type">
-    <meta content="{{ site.baseurl }}{{ page.url }}" property="og:url">
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- endif -%}
 
     <title>{{site.heading}}</title>
 
-    <link rel="canonical" href="{{site.baseurl}}{{page.url}}" />
+    <link rel="canonical" href="{{site.url}}{{page.url}}" />
     <link rel="apple-touch-icon" href="/assets/img/profile.png" />
     <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
-    <link href={{"/assets/css/style.css | relative_url"}} rel="stylesheet" media="all" class="default" />
-    <link href={{"/assets/css/main.css | relative_url"}} rel="stylesheet" media="all" class="default" />
+    <link {{ "/assets/css/style.css" | relative_url }} rel="stylesheet" media="all" class="default" />
+    <link href={{ "/assets/css/main.css" | relative_url }} rel="stylesheet" media="all" class="default" />
     <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
     <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
 
