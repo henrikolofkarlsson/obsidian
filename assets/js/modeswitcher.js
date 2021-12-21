@@ -37,7 +37,7 @@ function modeSwitcher() {
 	if (theme === "dark") {
 		document.documentElement.setAttribute('data-theme', 'light');
 		sessionStorage.setItem('theme', 'light');
-		changeIconImgSrc({{"/assets/img/sun.svg" | relative_url}});
+		changeIconImgSrc("/assets/img/sun.svg");
 	}	else if (theme === "light") {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		sessionStorage.setItem('theme', 'dark');
