@@ -52,12 +52,12 @@
     <title>{{site.heading}}</title>
 
     <link rel="canonical" href="{{site.url}}{{page.url}}" />
-    <link rel="apple-touch-icon" href="/assets/img/profile.png">
-    <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16" />
-    <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default" />
-    <link href="/assets/css/main.css" rel="stylesheet" media="all" class="default" />
-    <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
-    <link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
+    <link rel="apple-touch-icon" {{"/assets/img/profile.png" | relative_url}} />
+    <link rel="icon" {{"/assets/img/favicon.png" | relative_url}} type="image/png" sizes="16x16" />
+    <link {{"/assets/css/style.css" | relative_url}} rel="stylesheet" media="all" class="default" />
+    <link {{"/assets/css/main.css" | relative_url}} rel="stylesheet" media="all" class="default" />
+    <link {{"/assets/css/Util.css" | relative_url}} rel="stylesheet" media="all" class="default" />
+    <link {{"/assets/css/vendor/Katex.css" | relative_url}} rel="stylesheet" media="all" class="default" />
 
     <!--[if IE]>
         <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
@@ -76,7 +76,7 @@
                     {%- if site.preferences.homepage.enabled -%}
                             <!--- Show Homepage -->
                             {%- include Homepage.html -%}
-                            <script src="/assets/js/modeswitcher.js"></script>
+                            <script src={{"/assets/js/modeswitcher.js" | relative_url}}></script>
                     {%- else -%}
                             <!--- Show Feed Part -->
                     <div class="column is-half">
